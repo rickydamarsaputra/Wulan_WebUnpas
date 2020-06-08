@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebProgrammingUnpas | Official Website</title>
+  <!-- tailwind -->
+  <link rel="stylesheet" href="./css/tailwind.css" />
+  <!-- animatecss -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <!-- alpine -->
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <!-- slick -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha256-4hqlsNP9KM6+2eA8VUT0kk4RsMRTeS7QGHIM+MZ5sLY=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI=" crossorigin="anonymous" />
+  <!-- tippy -->
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
+</head>
+
+<body x-data="{isDark:false}">
+
+  <!-- header -->
+  <header class="fixed left-0 right-0 shadow-lg z-50" :class="{'bg-blue-custom' : isDark == false, 'bg-gray-800' : isDark == true}">
+    <div class="w-4/5 mx-auto py-4 flex justify-between items-center">
+      <a href="" class="z-50"><img src="./img/unpas-logo-small.png" alt="webprogrammingunpas logo" /></a>
+      <ul class="menu hidden lg:flex lg:flex-row lg:items-center lg:space-x-5 lg:space-y-0 space-y-5">
+        <li><a href="" class="unpas-nav-link">beranda</a></li>
+        <li><a href="" class="unpas-nav-link">belajar</a></li>
+        <li><a href="" class="unpas-nav-link">forum</a></li>
+        <li class="transform hover:scale-105 transition duration-500"><a href="" class="unpas-nav-button bg-white">login</a></li>
+        <li class="transform hover:scale-105 transition duration-500"><a href="" class="unpas-nav-button bg-white">register</a></li>
+        <li>
+          <button class="unpas-nav-button focus:outline-none" @click="isDark = !isDark" :class="{'bg-blue-900' : isDark == false, 'bg-white' : isDark == true}">
+            <i class="fas fa-moon text-white" x-show="isDark == false"></i>
+            <i class="fas fa-sun text-yellow-400" x-show="isDark == true"></i>
+          </button>
+        </li>
+      </ul>
+      <div class="toggle lg:hidden text-2xl text-white cursor-pointer z-50">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <section class="relative py-20" :class="{'bg-blue-custom' : isDark == false, 'bg-gray-800' : isDark == true}">
+    <div class="w-4/5 mx-auto h-screen flex items-center">
+      <div class="grid md:grid-cols-2">
+        <div class="flex flex-col justify-center text-white">
+          <div class="capitalize lg:text-3xl md:text-lg font-medium">selamat datang di</div>
+          <div class="capitalize lg:text-5xl md:text-3xl text-xl leading-tight font-bold">web programming unpas</div>
+        </div>
+        <div>
+          <img src="./img/hero-image.png" alt="hero image" class="lg:w-4/5">
+        </div>
+      </div>
+    </div>
+    <img src="./img/waves-one.png" alt="waves one" class="absolute bottom-0">
+    <img src="./img/waves-two.png" alt="waves two" class="absolute bottom-0">
+  </section>
+
+  <!-- services -->
+  <section class="py-20" :class="{'bg-gray-800' : isDark == true}">
+    <div class="w-4/5 mx-auto">
+      <div class="lg:w-1/2 md:w-4/5 mx-auto relative">
+        <div class="circle-one w-12 h-12 absolute rounded-full border-8 border-red-400 shadow-lg animated infinite bounce slower delay-2s"></div>
+        <div class="circle-two w-10 h-10 absolute rounded-full border-8 border-yellow-400 shadow-lg animated infinite bounce slower delay-3s"></div>
+        <div class="circle-three w-8 h-8 absolute rounded-full border-8 border-blue-custom shadow-lg animated infinite bounce slower delay-1s"></div>
+        <h1 class="capitalize md:text-center text-lg font-medium leading-tight" :class="{'text-blue-custom' : isDark == false, 'text-white' : isDark == true}">
+          belajar di<br>
+          <span class="uppercase md:text-4xl text-xl font-semibold">web programming unpas</span>
+        </h1>
+        <p class="md:text-center text-justify mt-4" :class="{'text-gray-700' : isDark == false, 'text-gray-400' : isDark == true}">
+          Ada 3 media untuk membantumu meningkatkan kemampuan dalam membangun sebuah wibsite di Web Programming UNPAS .
+        </p>
+      </div>
+      <div class="grid lg:grid-cols-3 grid-cols-1 lg:gap-16 gap-5 text-center mt-20">
+        <div class="transform hover:scale-105 hover:-translate-y-4 transition duration-500 cursor-pointer hover:shadow-outline rounded p-5">
+          <img src="./img/youtube-course.png" alt="youtube-course" class="md:w-full">
+          <h1 class="capitalize text-2xl font-medium" :class="{'text-gray-800' : isDark == false, 'text-white' : isDark == true}">course online</h1>
+          <p class="text-sm font-medium capitalize" :class="{'text-gray-600' : isDark == false, 'text-gray-400' : isDark == true}">
+            materi berupa video, modul materi, source code
+          </p>
+        </div>
+        <div class="transform hover:scale-105 hover:-translate-y-4 transition duration-500 cursor-pointer hover:shadow-outline rounded p-5">
+          <img src="./img/forum.png" alt="forum" class="md:w-full">
+          <h1 class="capitalize text-2xl font-medium" :class="{'text-gray-800' : isDark == false, 'text-white' : isDark == true}">forum diskusi</h1>
+          <p class="text-sm font-medium capitalize" :class="{'text-gray-600' : isDark == false, 'text-gray-400' : isDark == true}">
+            berdiskusi dengan instruktur dan siswa lain untuk memecahkan permasalahan dan menambah pengetahuan
+          </p>
+        </div>
+        <div class="transform hover:scale-105 hover:-translate-y-4 transition duration-500 cursor-pointer hover:shadow-outline rounded p-5">
+          <img src="./img/online-quiz.png" alt="online-quiz" class="md:w-full">
+          <h1 class="capitalize text-2xl font-medium" :class="{'text-gray-800' : isDark == false, 'text-white' : isDark == true}">kuis online</h1>
+          <p class="text-sm font-medium capitalize" :class="{'text-gray-600' : isDark == false, 'text-gray-400' : isDark == true}">
+            untuk mengevaluasi hasil belajar dan pemahaman kita
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- course -->
+  <section class="py-20" :class="{'bg-gray-700' : isDark == true, 'bg-gray-custom' : isDark == false}">
+    <div class="w-4/5 mx-auto">
+      <div class="lg:w-1/2 md:w-4/5 mx-auto relative">
+        <div class="circle-one w-12 h-12 absolute rounded-full border-8 border-red-400 shadow-lg animated infinite bounce slower delay-2s"></div>
+        <div class="circle-two w-10 h-10 absolute rounded-full border-8 border-yellow-400 shadow-lg animated infinite bounce slower delay-3s"></div>
+        <div class="circle-three w-8 h-8 absolute rounded-full border-8 border-blue-custom shadow-lg animated infinite bounce slower delay-1s"></div>
+        <h1 class="capitalize md:text-center text-4xl font-bold leading-tight" :class="{'text-blue-custom' : isDark == false, 'text-white' : isDark == true}">
+          materi terbaru
+        </h1>
+        <p class="md:text-center text-justify mt-4" :class="{'text-gray-700' : isDark == false, 'text-gray-400' : isDark == true}">
+          Kumpulan materi terbaru di Web Programming UNPAS.
+        </p>
+      </div>
+      <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mt-10">
+        <div class="bg-white shadow-lg rounded cursor-pointer transform hover:scale-105 hover:-translate-y-2 hover:shadow-outline transition duration-500">
+          <img src="./img/vscode-course.png" alt="vscode-course">
+          <p class="text-center text-xs my-4 text-gray-700">3 bulan yang lalu | 1 video</p>
+          <div class="border-t px-4 py-4" :class="{'bg-gray-900' : isDark == true}">
+            <h3 class="capitalize text-center text-lg font-medium" :class="{'text-gray-600' : isDark == false, 'text-white' : isDark == true}">visual studio code master</h3>
+            <p class="text-justify mt-4 capitalize text-sm text-gray-500">pada materi ini kita akan mempelajari tentang tool...</p>
+          </div>
+        </div>
+        <div class="bg-white shadow-lg rounded cursor-pointer transform hover:scale-105 hover:-translate-y-2 hover:shadow-outline transition duration-500">
+          <img src="./img/materialize-course.png" alt="materialize-course.png">
+          <p class="text-center text-xs my-4 text-gray-700">7 bulan yang lalu | 2 video</p>
+          <div class="border-t px-4 py-4" :class="{'bg-gray-900' : isDark == true}">
+            <h3 class="capitalize text-center text-lg font-medium" :class="{'text-gray-600' : isDark == false, 'text-white' : isDark == true}">materialize</h3>
+            <p class="text-justify mt-4 capitalize text-sm text-gray-500">pada materi ini kita akan mempelajari framework css...</p>
+          </div>
+        </div>
+        <div class="bg-white shadow-lg rounded cursor-pointer transform hover:scale-105 hover:-translate-y-2 hover:shadow-outline transition duration-500">
+          <img src="./img/bootstrap-course.png" alt="materialize-course.png">
+          <p class="text-center text-xs my-4 text-gray-700">7 bulan yang lalu | 6 video</p>
+          <div class="border-t px-4 py-4" :class="{'bg-gray-900' : isDark == true}">
+            <h3 class="capitalize text-center text-lg font-medium" :class="{'text-gray-600' : isDark == false, 'text-white' : isDark == true}">bootstrap</h3>
+            <p class="text-justify mt-4 capitalize text-sm text-gray-500">pada materi ini kita akan mempelajari framework css...</p>
+          </div>
+        </div>
+        <div class="bg-white shadow-lg rounded cursor-pointer transform hover:scale-105 hover:-translate-y-2 hover:shadow-outline transition duration-500">
+          <img src="./img/php-course.png" alt="materialize-course.png">
+          <p class="text-center text-xs my-4 text-gray-700">8 bulan yang lalu | 25 video</p>
+          <div class="border-t px-4 py-4" :class="{'bg-gray-900' : isDark == true}">
+            <h3 class="capitalize text-center text-lg font-medium" :class="{'text-gray-600' : isDark == false, 'text-white' : isDark == true}">PHP pemula</h3>
+            <p class="text-justify mt-4 capitalize text-sm text-gray-500">pada materi ini kita akan mempelajari PHP dasar un...</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row justify-center">
+        <button class="transition-all duration-500 py-2 px-8 text-white capitalize font-medium rounded mt-10" :class="{'bg-blue-custom hover:bg-blue-700' : isDark == false, 'bg-gray-800 hover:bg-gray-900' : isDark == true}">lihat selengkapnya</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- instruktur -->
+  <section class="py-20" :class="{'bg-gray-700' : isDark == true, 'unpas-instruktur' : isDark == false}">
+    <div class="w-4/5 mx-auto">
+      <div class="lg:w-1/2 md:w-4/5 mx-auto relative">
+        <div class="circle-one w-12 h-12 absolute rounded-full border-8 border-red-400 shadow-lg animated infinite bounce slower delay-2s"></div>
+        <div class="circle-two w-10 h-10 absolute rounded-full border-8 border-yellow-400 shadow-lg animated infinite bounce slower delay-3s"></div>
+        <div class="circle-three w-8 h-8 absolute rounded-full border-8 border-blue-custom shadow-lg animated infinite bounce slower delay-1s"></div>
+        <h1 class="capitalize md:text-center text-4xl font-bold leading-tight" :class="{'text-blue-custom' : isDark == false, 'text-white' : isDark == true}">
+          instruktur
+        </h1>
+        <p class="md:text-center text-justify mt-4" :class="{'text-gray-700' : isDark == false, 'text-gray-400' : isDark == true}">
+          Pengisi materi di Web Programming UNPAS .
+        </p>
+      </div>
+      <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-1">
+        <div>
+          <img src="./img/sandhika.png" alt="sandhika-galih" class="mx-auto">
+        </div>
+        <div class="flex flex-col justify-center">
+          <div>
+            <h1 class="text-center text-2xl font-semibold mt-10" :class="{'text-gray-600' : isDark == false, 'text-white' : isDark == true}">Sandhika Galih</h1>
+            <h3 class="text-center text-gray-500 font-light">Lecturer | YouTuber</h3>
+          </div>
+          <div class="flex justify-center space-x-2 mt-4">
+            <a href="" class="unpas-social-icon transition-all duration-500 transform hover:-translate-y-2" :class="{'text-blue-custom border-blue-custom hover:bg-blue-200' : isDark == false, 'text-white' : isDark == true}"><i class="fab fa-facebook-f"></i></a>
+            <a href="" class="unpas-social-icon transition-all duration-500 transform hover:-translate-y-2" :class="{'text-blue-custom border-blue-custom hover:bg-blue-200' : isDark == false, 'text-white' : isDark == true}"><i class="fab fa-twitter"></i></a>
+            <a href="" class="unpas-social-icon transition-all duration-500 transform hover:-translate-y-2" :class="{'text-blue-custom border-blue-custom hover:bg-blue-200' : isDark == false, 'text-white' : isDark == true}"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- support -->
+  <section class="py-20" :class="{'unpas-support' : isDark == false, 'bg-gray-800' : isDark == true}">
+    <div class="w-4/5 mx-auto flex flex-col md:flex-row space-y-10 lg:space-y-0 justify-between items-center">
+      <div class="text-white text-5xl">support by</div>
+      <div><img src="./img/unipas.png" alt="unipas" class="w-32"></div>
+      <div><img src="./img/logo-if.png" alt="logo-if" class="w-32"></div>
+    </div>
+  </section>
+
+  <!-- testimoni -->
+  <section class="py-20" :class="{'bg-gray-700' : isDark == true, 'bg-gray-custom' : isDark == false}">
+    <div class="w-4/5 mx-auto">
+      <div class="lg:w-1/2 md:w-4/5 mx-auto relative">
+        <div class="circle-one w-12 h-12 absolute rounded-full border-8 border-red-400 shadow-lg animated infinite bounce slower delay-2s"></div>
+        <div class="circle-two w-10 h-10 absolute rounded-full border-8 border-yellow-400 shadow-lg animated infinite bounce slower delay-3s"></div>
+        <div class="circle-three w-8 h-8 absolute rounded-full border-8 border-blue-custom shadow-lg animated infinite bounce slower delay-1s"></div>
+        <h1 class="capitalize md:text-center text-4xl font-bold leading-tight" :class="{'text-blue-custom' : isDark == false, 'text-white' : isDark == true}">
+          apa kata mereka ?
+        </h1>
+        <p class="md:text-center text-justify mt-4" :class="{'text-gray-700' : isDark == false, 'text-gray-400' : isDark == true}">
+          Mari kita simak testimoni dari member Web Programming UNPAS
+        </p>
+      </div>
+      <!-- testimonial members unpas -->
+      <div class="unpas-members-testimonial mt-10">
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="py-20" :class="{'unpas-support' : isDark == false, 'bg-gray-800' : isDark == true}">
+    <div class="w-4/5 mx-auto">
+      <img src="./img/unpas-logo-big.png" alt="webprogrammingunpas logo" class="mx-auto">
+      <h3 class="text-center capitalize font-bold text-white">web programming UNPAS</h3>
+      <div class="flex space-x-2 justify-center my-4">
+        <div class="w-2 h-1 bg-white rounded-full"></div>
+        <div class="w-8 h-1 bg-white rounded-full"></div>
+        <div class="w-2 h-1 bg-white rounded-full"></div>
+      </div>
+      <h3 class="text-center md:text-base text-xs capitalize font-bold text-white">
+        © 2019 Built with <i class="fas fa-heart text-red-700 animated heartBeat infinite slower"></i> by : Codelillah
+      </h3>
+    </div>
+  </footer>
+
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <!-- fontawesome -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+  <!-- slick -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <!-- tippy -->
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
