@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="Description" content="website official webprogramming unpas untuk belajar coding">
+  <meta name="tutorial coding" content="webprogramming unpas tempat aneka tutorial coding menyenangkan">
+  <meta name="pemprogramman" content="PHP laravel botstrap materialize codeigniter javascript materialize">
   <title>WebProgrammingUnpas | Official Website</title>
   <!-- tailwind -->
   <link rel="stylesheet" href="./css/tailwind.css" />
@@ -31,7 +34,7 @@
         <li class="transform hover:scale-105 transition duration-500"><a href="" class="unpas-nav-button bg-white">login</a></li>
         <li class="transform hover:scale-105 transition duration-500"><a href="" class="unpas-nav-button bg-white">register</a></li>
         <li>
-          <button class="unpas-nav-button focus:outline-none" @click="isDark = !isDark" :class="{'bg-blue-900' : isDark == false, 'bg-white' : isDark == true}">
+          <button class="unpas-nav-button focus:outline-none" @click="isDark = !isDark" :class="{'bg-blue-900' : isDark == false, 'bg-white' : isDark == true}" aria-label="toggle-mode-button">
             <i class="fas fa-moon text-white" x-show="isDark == false"></i>
             <i class="fas fa-sun text-yellow-400" x-show="isDark == true"></i>
           </button>
@@ -179,9 +182,9 @@
             <h3 class="text-center text-gray-500 font-light">Lecturer | YouTuber</h3>
           </div>
           <div class="flex justify-center space-x-2 mt-4">
-            <a href="" class="unpas-social-icon transition-all duration-500 transform hover:-translate-y-2" :class="{'text-blue-custom border-blue-custom hover:bg-blue-200' : isDark == false, 'text-white' : isDark == true}"><i class="fab fa-facebook-f"></i></a>
-            <a href="" class="unpas-social-icon transition-all duration-500 transform hover:-translate-y-2" :class="{'text-blue-custom border-blue-custom hover:bg-blue-200' : isDark == false, 'text-white' : isDark == true}"><i class="fab fa-twitter"></i></a>
-            <a href="" class="unpas-social-icon transition-all duration-500 transform hover:-translate-y-2" :class="{'text-blue-custom border-blue-custom hover:bg-blue-200' : isDark == false, 'text-white' : isDark == true}"><i class="fab fa-instagram"></i></a>
+             <a href="" class="unpas-social-icon transition-all duration-500 transform hover:-translate-y-2" :class="{'text-blue-custom border-blue-custom hover:bg-blue-200' : isDark == false, 'text-white' : isDark == true}" aria-label="social-icons"><i class="fab fa-facebook-f"></i></a>
+            <a href="" class="unpas-social-icon transition-all duration-500 transform hover:-translate-y-2" :class="{'text-blue-custom border-blue-custom hover:bg-blue-200' : isDark == false, 'text-white' : isDark == true}" aria-label="social-icons"><i class="fab fa-twitter"></i></a>
+            <a href="" class="unpas-social-icon transition-all duration-500 transform hover:-translate-y-2" :class="{'text-blue-custom border-blue-custom hover:bg-blue-200' : isDark == false, 'text-white' : isDark == true}" aria-label="social-icons"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
